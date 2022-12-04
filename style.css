@@ -1,134 +1,99 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-h1{
-    font-size: 5vw;
+.prashantlogo{
+    width: 25vw;
+    height: 15vh;
 }
 
-nav{
-    background-color: rgb(113, 10, 113);
-    color: white;
+.navMenu{
+  width: 65vw;
+}
+
+.navList{
+    display: flex;
+    flex-direction: row;
+    width: 70vw;
+    justify-content: center;
+}
+
+.navLink{
+    text-decoration: none;
+    color: black;
+}
+
+nav li{
+    list-style: none;
+    padding-left: 5vw;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.navLink:hover{
+    color: blueviolet;
+}
+
+nav {
+    background-color: white;
+    width: 100%;
+    align-items: center;
+    height: 10vh;
+    display: flex;
+    padding: 1vh 1vw;
+    overflow: hidden;
+  }
+
+  .introduction{
+    /* background: #000; */
+    display: flex;
+    width: 100%;
+  }
+
+.firstCol{
+    width: 10vw;
+    height: 50vh;
+    border: 2px solid red;
+    margin-left: 2vw;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.secondCol{
+    width: 30vw; 
+    border: 2px solid blue;
+    margin-left: 2vw;
+}
+
+.thirdCol{
+    width: 50vw;
+    border: 2px solid yellowgreen;
+    margin-left: 2vw;
+  }
+
+  .linkedInImg{
+    width: 50px;
     height: 50px;
-    font-size: 25px;
-    display: flex;
-    align-items: center;
-    padding: 10px;
-}
-nav ul{
-    list-style-type: none;
-}
+  }
 
-.gameContainer{
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-}
+  .githubImg{
+    width: 50px;
+    height: 50px;
+  }
 
-.container{
-    display: grid;
-    grid-template-rows: repeat(3,10vw);
-    grid-template-columns: repeat(3,10vw);
-    font-family:sans-serif;
-    background-color: rgba(34, 113, 104, 0.799);
-    position: relative;
-}
+  .vercelImg{
+    width: 50px;
+    height: 50px;
+    fill: #7006E6;
+  }
 
-.box{
-    border: 0.2vw solid black;
-    font-size: 10vw;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+  div a svg{
+    width: 50px;
+    height: 50px;
+  }
 
-.box:hover{
-    background-color: rgba(127, 85, 167, 0.436);
-}
-
-.gameInfo{
-    padding: 0 40px;
-}
-
-.imgbox img{
-    width: 0;
-    transition: width is ease-in-out;
-}
-
-.info{
-    padding: 10px;
-    display: block;
-    margin-top: 20px;
-    font-size: 3vw;
-    font-weight: bold;
-}
-
-#reset{
-    cursor: pointer;
-}
-
-.br-0{
-    border-right: 0;
-}
-.bl-0{
-    border-left: 0;
-}
-.bt-0{
-    border-top: 0;
-}
-.bb-0{
-    border-bottom: 0;
-}
-
-#reset{
-    margin: 20px 25px;
-    padding: 10px 30px;
-    border: 2px solid black;
-    font-size: 30px;
-    width: 300px;
-    background-color: #ee77009e;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-#reset:hover{
-    background-color: #5a340ed2;
-}
-
-.music{
-    margin: 20px 10px;
-    padding: 10px 30px;
-    border: 2px solid black;
-    font-size: 30px;
-    width: 200px;
-    background-color: #5b65c4;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.music:hover{
-    background-color: #1f2649ef;
-}
-
-@media screen and (max-width: 900px){
-    .gameContainer{
-        flex-wrap: wrap;
-    }
-    .gameInfo{
-        margin-top: 33px;
-    }
-    h1{
-        font-size: 1.5rem;
-    }
-}
-
-.line{
-    background-color: rgb(0, 255, 13);
-    width: 0vw;
-    height: 1.2rem;
-    position: absolute;
-    left: 2.5vw;
-    top: 4.2vw;
-}

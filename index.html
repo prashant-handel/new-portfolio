@@ -4,42 +4,69 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tic Tac Toe</title>
+    <title>Prashant Handel</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav>
-      <ul>
-        <li>MyTicTacToe.com</li>
-      </ul>
-    </nav>
-
-    <div class="gameContainer">
+    <header id="header" class="header">
+      <nav class="nav">
+        <a href="#" class="navLogo"
+          ><img class="prashantlogo" src="prashantlogo.jpg"
+        /></a>
+        <div id="navMenu" class="navMenu">
+          <ul id="navList" class="navList">
+            <li><a href="#home" class="navLink">Home</a></li>
+            <li><a href="#about" class="navLink">About</a></li>
+            <li><a href="#projects" class="navLink">Projects</a></li>
+            <li><a href="#blogs" class="navLink">Blogs</a></li>
+            <li><a href="#contactMe" class="navLink">Contact Me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
       <div class="container">
-        <div class="line"></div>
-        <div class="box bt-0 bl-0"><span class="boxText"></span></div>
-        <div class="box bt-0"><span class="boxText"></span></div>
-        <div class="box bt-0 br-0"><span class="boxText"></span></div>
-        <div class="box bl-0"><span class="boxText"></span></div>
-        <div class="box"><span class="boxText"></span></div>
-        <div class="box br-0"><span class="boxText"></span></div>
-        <div class="box bl-0 bb-0"><span class="boxText"></span></div>
-        <div class="box bb-0"><span class="boxText"></span></div>
-        <div class="box bb-0 br-0"><span class="boxText"></span></div>
-      </div>
-      <div class="gameInfo">
-        <h1>Welcome to MyTicTacToe</h1>
-        <div>
-          <span class="info">Turn for X</span>
-          <button id="reset">Reset</button>
-          <button id="musicOn" class="music">Music On</button>
-          <button id="musicOff" class="music">Music Off</button>
-          <div class="imgbox">
-            <img src="excited.gif" />
+        <div class="introduction">
+          <div class="firstCol">
+            <a href="" class="linkedInImg">
+              <img
+                alt="linkedIn"
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNTAiIGhlaWdodD0iNTAiCnZpZXdCb3g9IjAsMCwyNTYsMjU2IgpzdHlsZT0iZmlsbDojMDAwMDAwOyI+CjxnIGZpbGw9IiM3MDA2YjYiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxnIHRyYW5zZm9ybT0ic2NhbGUoNS4xMiw1LjEyKSI+PHBhdGggZD0iTTgsMy4wMTE3MmMtMS42ODczOSwwIC0zLjE2NDUyLDAuNDc5OTEgLTQuMjQ2MDksMS4zNTM1MmMtMS4wODE1NywwLjg3MzYgLTEuNzQyMTksMi4xNjc5OCAtMS43NDIxOSwzLjU4MjAzYzAsMi43NDM1NyAyLjQ1Njk5LDQuODY3MiA1LjcwNTA4LDQuOTk0MTRjMC4wOTE2MiwwLjAyOTMzIDAuMTg3MDIsMC4wNDUxMiAwLjI4MzIsMC4wNDY4OGMxLjc1MzU3LDAgMy4yNDYxOSwtMC41MTQwMSA0LjMxMjUsLTEuNDIzODNjMS4wNjYzMSwtMC45MDk4MSAxLjY3NTc4LC0yLjIyMTUyIDEuNjc1NzgsLTMuNjE3MTljLTAuMDAwMTUsLTAuMDE4MjQgLTAuMDAwOCwtMC4wMzY0OCAtMC4wMDE5NSwtMC4wNTQ2OWMtMC4xNTQwMiwtMi43NjA4OSAtMi42MTE1NSwtNC44ODA4NiAtNS45ODYzMywtNC44ODA4NnpNOCw0Ljk4ODI4YzIuNjA5MDcsMCAzLjg5NTg4LDEuMjgxMDYgNC4wMDU4NiwyLjk4NDM4Yy0wLjAwNzEsMC44MzIyOCAtMC4zMjkzLDEuNTM5MjQgLTAuOTc0NjEsMi4wODk4NGMtMC42NTI0NCwwLjU1NjY5IC0xLjY1OTgyLDAuOTQ5MjIgLTMuMDMxMjUsMC45NDkyMmMtMi42MDE5NSwwIC00LjAxMTcyLC0xLjQxMjU1IC00LjAxMTcyLC0zLjA2NDQ1YzAsLTAuODI1OTUgMC4zMzkzOSwtMS41MDUwMiAxLjAwNzgxLC0yLjA0NDkyYzAuNjY4NDMsLTAuNTM5OSAxLjY5MTMsLTAuOTE0MDYgMy4wMDM5MSwtMC45MTQwNnpNMywxNWMtMC41NTIyNiwwLjAwMDA2IC0wLjk5OTk0LDAuNDQ3NzQgLTEsMXYyOWMwLjAwMDA2LDAuNTUyMjYgMC40NDc3NCwwLjk5OTk0IDEsMWgxMGMwLjU1MjI2LC0wLjAwMDA2IDAuOTk5OTQsLTAuNDQ3NzQgMSwtMXYtOS4zMzU5NHYtMTkuNjY0MDZjLTAuMDAwMDYsLTAuNTUyMjYgLTAuNDQ3NzQsLTAuOTk5OTQgLTEsLTF6TTE4LDE1Yy0wLjU1MjI2LDAuMDAwMDYgLTAuOTk5OTQsMC40NDc3NCAtMSwxdjI5YzAuMDAwMDYsMC41NTIyNiAwLjQ0Nzc0LDAuOTk5OTQgMSwxaDEwYzAuNTUyMjYsLTAuMDAwMDYgMC45OTk5NCwtMC40NDc3NCAxLC0xdi0xNnYtMC4yNXYtMC4yNWMwLC0xLjk0NDQyIDEuNTU1NTgsLTMuNSAzLjUsLTMuNWMxLjk0NDQyLDAgMy41LDEuNTU1NTggMy41LDMuNXYxNi41YzAuMDAwMDYsMC41NTIyNiAwLjQ0Nzc0LDAuOTk5OTQgMSwxaDEwYzAuNTUyMjYsLTAuMDAwMDYgMC45OTk5NCwtMC40NDc3NCAxLC0xdi0xN2MwLC00LjEyNjUyIC0xLjIxMjExLC03LjM5NTU1IC0zLjI1NTg2LC05LjYyNWMtMi4wNDM3NSwtMi4yMjk0NSAtNC44OTQ5MywtMy4zNzUgLTcuOTU3MDMsLTMuMzc1Yy0zLjkwNDI0LDAgLTYuMjY1NDgsMS40MjYwOCAtNy43ODcxMSwyLjYwMTU2di0xLjYwMTU2Yy0wLjAwMDA2LC0wLjU1MjI2IC0wLjQ0Nzc0LC0wLjk5OTk0IC0xLC0xek00LDE3aDh2MTguNjY0MDZ2OC4zMzU5NGgtOHpNMTksMTdoOHYyLjYzODY3YzAuMDAwMTMsMC40MTQyMiAwLjI1NTYsMC43ODU0OSAwLjY0MjQyLDAuOTMzNjRjMC4zODY4MiwwLjE0ODE0IDAuODI0OTQsMC4wNDI1IDEuMTAxNzIsLTAuMjY1NjdjMCwwIDIuOTY1NywtMy4zMDY2NCA4LjA0Mjk3LC0zLjMwNjY0YzIuNTcyOSwwIDQuODI4NDIsMC45MjIyNyA2LjQ4MjQyLDIuNzI2NTZjMS42NTQsMS44MDQzIDIuNzMwNDcsNC41MzQ5NiAyLjczMDQ3LDguMjczNDR2MTZoLTh2LTE1LjVjMC4wMDEyNiwtMC4xNDExMSAtMC4wMjczNywtMC4yODA4OSAtMC4wODM5OCwtMC40MTAxNmMtMC4yMjE5NiwtMi44MjU3MyAtMi41MzU2OSwtNS4wODk4NCAtNS40MTYwMiwtNS4wODk4NGMtMy4wMjU1OCwwIC01LjUsMi40NzQ0MiAtNS41LDUuNXYwLjI1djAuMjV2MTVoLTh6Ij48L3BhdGg+PC9nPjwvZz4KPC9zdmc+"
+              />
+            </a>
+            <a href="" class="githubImg"
+              ><img alt="svgImg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNjQiIGhlaWdodD0iNjQiCnZpZXdCb3g9IjAsMCwyNTYsMjU2IgpzdHlsZT0iZmlsbDojMDAwMDAwOyI+CjxkZWZzPjxsaW5lYXJHcmFkaWVudCB4MT0iMzAuOTk5IiB5MT0iMTYiIHgyPSIzMC45OTkiIHkyPSI1NS4zNDIiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiBpZD0iY29sb3ItMV81MjUzOV9ncjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzcwMDZlNiI+PC9zdG9wPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzcwMDZlNiI+PC9zdG9wPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IHgxPSIzMiIgeTE9IjUiIHgyPSIzMiIgeTI9IjU5LjE2NyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGlkPSJjb2xvci0yXzUyNTM5X2dyMiI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjNzAwNmU2Ij48L3N0b3A+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjYzgyMmZmIj48L3N0b3A+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJub256ZXJvIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWxpbmVjYXA9ImJ1dHQiIHN0cm9rZS1saW5lam9pbj0ibWl0ZXIiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLWRhc2hhcnJheT0iIiBzdHJva2UtZGFzaG9mZnNldD0iMCIgZm9udC1mYW1pbHk9Im5vbmUiIGZvbnQtd2VpZ2h0PSJub25lIiBmb250LXNpemU9Im5vbmUiIHRleHQtYW5jaG9yPSJub25lIiBzdHlsZT0ibWl4LWJsZW5kLW1vZGU6IG5vcm1hbCI+PGcgdHJhbnNmb3JtPSJzY2FsZSg0LDQpIj48cGF0aCBkPSJNMjUuMDA4LDU2LjAwN2MtMC4wMDMsLTAuMzY4IC0wLjAwNiwtMS45NjIgLTAuMDA5LC0zLjQ1NGwtMC4wMDMsLTEuNTVjLTYuNzI5LDAuOTE1IC04LjM1OCwtMy43OCAtOC4zNzYsLTMuODNjLTAuOTM0LC0yLjM2OCAtMi4yMTEsLTMuMDQ1IC0yLjI2NiwtMy4wNzNsLTAuMTI0LC0wLjA3MmMtMC40NjMsLTAuMzE2IC0xLjY5MSwtMS4xNTcgLTEuMzQyLC0yLjI2M2MwLjMxNSwtMC45OTcgMS41MzYsLTEuMSAyLjA5MSwtMS4wODJjMy4wNzQsMC4yMTUgNC42MywyLjk3OCA0LjY5NCwzLjA5NWMxLjU2OSwyLjY4OSAzLjk2NCwyLjQxMSA1LjUwOSwxLjg0NGMwLjE0NCwtMC42ODggMC4zNjcsLTEuMzIgMC42NTksLTEuODc4Yy00Ljk1NiwtMC44NzkgLTEwLjU3MSwtMy41MTUgLTEwLjU3MSwtMTMuMTA0YzAsLTIuNjMzIDAuODIsLTQuOTYgMi40NDEsLTYuOTI5Yy0wLjM2MiwtMS4yMDYgLTAuNzc0LC0zLjY2NiAwLjQ0NiwtNi43NjVsMC4xNzQsLTAuNDQybDAuNDUyLC0wLjE0NGMwLjQxNiwtMC4xMzcgMi42ODgsLTAuNjI0IDcuMzU5LDIuNDMzYzEuOTI4LC0wLjQ5NCAzLjk2OSwtMC43NDkgNi4wNzQsLTAuNzU5YzIuMTE1LDAuMDEgNC4xNTgsMC4yNjUgNi4wOSwwLjc1OWM0LjY2NywtMy4wNTggNi45MzQsLTIuNTY1IDcuMzUxLC0yLjQzM2wwLjQ1MSwwLjE0NWwwLjE3NCwwLjQ0YzEuMjI1LDMuMDk4IDAuODEzLDUuNTU5IDAuNDUxLDYuNzY2YzEuNjE4LDEuOTYzIDIuNDM4LDQuMjkxIDIuNDM4LDYuOTI5YzAsOS41OTEgLTUuNjIxLDEyLjIxOSAtMTAuNTg4LDEzLjA4N2MwLjU2MywxLjA2NSAwLjg2OCwyLjQwMiAwLjg2OCwzLjg3OGMwLDEuNjgzIC0wLjAwNyw3LjIwNCAtMC4wMTUsOC40MDJsLTIsLTAuMDE0YzAuMDA4LC0xLjE5NiAwLjAxNSwtNi43MDggMC4wMTUsLTguMzg5YzAsLTIuNDQyIC0wLjk0MywtMy41MjIgLTEuMzUsLTMuODc0bC0xLjczLC0xLjQ5N2wyLjI3NCwtMC4yNTNjNS4yMDUsLTAuNTc4IDEwLjUyNSwtMi4zNzkgMTAuNTI1LC0xMS4zNDFjMCwtMi4zMyAtMC43NzcsLTQuMzYxIC0yLjMxLC02LjAzNmwtMC40MywtMC40NjlsMC4yNDIsLTAuNTg3YzAuMTY2LC0wLjQwMSAwLjg5NCwtMi40NDIgLTAuMDQzLC01LjI5MWMtMC43NTgsMC4wNDUgLTIuNTY4LDAuNDAyIC01LjU4NCwyLjQ0N2wtMC4zODQsMC4yNTlsLTAuNDQ1LC0wLjEyM2MtMS44NjMsLTAuNTE4IC0zLjkzOCwtMC43OTYgLTYuMDAxLC0wLjgwNmMtMi4wNTIsMC4wMSAtNC4xMjQsMC4yODggLTUuOTg0LDAuODA2bC0wLjQ0NSwwLjEyM2wtMC4zODMsLTAuMjU5Yy0zLjAxOSwtMi4wNDQgLTQuODMzLC0yLjQwNCAtNS41OTQsLTIuNDQ5Yy0wLjkzNSwyLjg1MSAtMC4yMDYsNC44OTIgLTAuMDQsNS4yOTNsMC4yNDIsMC41ODdsLTAuNDI5LDAuNDY5Yy0xLjUzNiwxLjY4MSAtMi4zMTQsMy43MTIgLTIuMzE0LDYuMDM2YzAsOC45NTggNS4zMSwxMC43NyAxMC41MDQsMTEuMzYxbDIuMjUyLDAuMjU2bC0xLjcwOCwxLjQ5Yy0wLjM3MiwwLjMyNSAtMS4wMywxLjExMiAtMS4yNTQsMi43MjdsLTAuMDc1LDAuNTQ5bC0wLjUwNiwwLjIyN2MtMS4zMjEsMC41OTIgLTUuODM5LDIuMTYyIC04LjU0OCwtMi40ODVjLTAuMDE1LC0wLjAyNSAtMC41NDQsLTAuOTQ1IC0xLjUwMiwtMS41NTdjMC42NDYsMC42MzkgMS40MzMsMS42NzMgMi4wNjgsMy4yODdjMC4wNjYsMC4xOSAxLjM1NywzLjYyMiA3LjI4LDIuMzM5bDEuMjA2LC0wLjI2MmwwLjAxMiwzLjk3OGMwLjAwMywxLjQ4NyAwLjAwNiwzLjA3NiAwLjAwOSwzLjQ0NHoiIGZpbGw9InVybCgjY29sb3ItMV81MjUzOV9ncjEpIj48L3BhdGg+PHBhdGggZD0iTTMyLDU4Yy0xNC4zMzcsMCAtMjYsLTExLjY2MyAtMjYsLTI2YzAsLTE0LjMzNyAxMS42NjMsLTI2IDI2LC0yNmMxNC4zMzcsMCAyNiwxMS42NjMgMjYsMjZjMCwxNC4zMzcgLTExLjY2MywyNiAtMjYsMjZ6TTMyLDhjLTEzLjIzMywwIC0yNCwxMC43NjcgLTI0LDI0YzAsMTMuMjMzIDEwLjc2NywyNCAyNCwyNGMxMy4yMzMsMCAyNCwtMTAuNzY3IDI0LC0yNGMwLC0xMy4yMzMgLTEwLjc2NywtMjQgLTI0LC0yNHoiIGZpbGw9InVybCgjY29sb3ItMl81MjUzOV9ncjIpIj48L3BhdGg+PC9nPjwvZz4KPC9zdmc+"/></a>
+            <a href="" class="vercelImg"><?xml version="1.0" encoding="UTF-8"?>
+              <svg width="256px" height="222px" viewBox="0 0 256 222" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+                  <g>
+                      <polygon fill="#7006E6" points="128 0 256 221.705007 0 221.705007"></polygon>
+                  </g>
+              </svg></a>
+           
+          </div>
+          <div class="secondCol">
+            <div class="welcomeText">Hi, I am Prashant Handel</div>
+            <div class="frontendDeveloper">Frontend developer</div>
+            <div class="about">
+              I'm a self taught web developer and a learner. B.Tech graduate
+              with fundamental understanding of HTML/ CSS, Tailwind, JavaScript,
+              Github.
+            </div>
+            <div class="contactMe">Contact Me</div>
+          </div>
+          <div class="thirdCol">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path
+                fill="#7006B6"
+                d="M60.1, -35.5C68.5, -20,59.6,4.6,46.7,25.8C33.8,47,16.9,64.8,-0.5,65C-17.9,65.3,-35.7,48.1,-45.9,28.5C-56,8.9,-58.4,-13.1,-49.4,-28.8C-40.5,-44.5,-20.2,-53.9,2.8,-55.5C25.8,-57.2,51.6,-50.9,60.1,-35.5Z"
+                transform="translate(100 100)"
+              />
+            </svg>
           </div>
         </div>
       </div>
-    </div>
-    <script src="app.js"></script>
+      <div class="scrollDown">Scroll down</div>
+    </main>
+    <script src="script.js"></script>
   </body>
 </html>
