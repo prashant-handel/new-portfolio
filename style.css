@@ -2,11 +2,17 @@
     margin: 0;
     padding: 0;
     font-family: 'Times New Roman', Times, serif;
+    scroll-behavior: smooth;
+}
+
+body{
+  overflow-x: hidden;
 }
 
 .prashantlogo{
-    width: 25vw;
-    height: 15vh;
+  width: 25vw;
+  height: 8vh;
+  padding-top: 2vh;
 }
 
 .navMenu{
@@ -26,14 +32,15 @@
 }
 
 nav li{
-    list-style: none;
-    padding-left: 5vw;
-    font-size: 1.8rem;
-    font-weight: 700;
+  list-style: none;
+  padding-left: 3vw;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .navLink:hover{
     color: blueviolet;
+    border-bottom: 2px solid #7006E6;
 }
 
 nav {
@@ -50,30 +57,35 @@ nav {
     /* background: #000; */
     display: flex;
     width: 100%;
+    margin-left: 5vw;
   }
 
 .firstCol{
     width: 10vw;
     height: 50vh;
-    border: 2px solid red;
-    margin-left: 2vw;
+    /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
     gap: 5vh;
     justify-content: center;
     align-items: center;
+    height: 66vh;
+    padding: 2vh 1vw;
 }
 
 .secondCol{
     width: 30vw; 
-    border: 2px solid blue;
-    margin-left: 2vw;
-}
+    height: 60vh;
+    /* border: 2px solid blue; */
+    padding: 10vh 1vw;
+    padding-bottom: 0;
 
-.thirdCol{
+  }
+  
+  .thirdCol{
     width: 50vw;
-    border: 2px solid yellowgreen;
-    margin-left: 2vw;
+    height: 70vh;
+    /* border: 2px solid yellowgreen; */
   }
 
   .linkedInImg{
@@ -97,3 +109,94 @@ nav {
     height: 50px;
   }
 
+  .welcomeText{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 20vh;
+  }
+
+  .tagLine{
+    font-size: 2rem;
+  }
+
+  .aboutIntro{
+    font-size: x-large;
+  }
+
+  .thirdCol svg{
+    width: 40vw;
+  }
+
+  .secondCol div{
+    margin-top: 5vh;
+  }
+
+  .contactMe button{
+    cursor: pointer;
+    background-color: #7006E6;
+    color: white;
+    padding: 1vh 1vw;
+    border-radius: 10px;
+    font-size: x-large;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .contactMe button svg{
+    width: 2vw;
+    margin: -7px 5px;
+    margin-right: 1px;
+  }
+
+  #mouseIcon{
+    width: 2vw;
+    fill: #7006E6;
+    margin: -7px 15px;
+    margin-left: 0;
+  }
+  
+  .scrollDown button{
+    color: #7006E6;
+    font-size: larger;
+    margin: 7vh 18vw;
+    border: none;
+    font-weight: 600;
+    background-color: white;
+  }
+
+  #downArrow{
+    width: 1vw;
+    fill: #7006E6;
+    margin: 0px 15px;
+  }
+
+  .scrollDown button:hover{
+    cursor: pointer;
+  }
+
+  .pic{
+    width: 20vw;
+    display: flex;
+  }
+
+  .aboutMe{
+    display: flex;
+    font-size: 500%;
+    justify-content: center;
+    margin: 1em 0;
+  }
+
+  .aboutSection{
+    display: flex;
+    justify-content: center;
+  }
+
+  .aboutText{
+    font-size: x-large;
+    width: 40vw;
+    margin-left: 10vw;
+  }
+
+  .skills{
+    font-size: xx-large;
+  }
