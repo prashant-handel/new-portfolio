@@ -58,5 +58,13 @@ window.addEventListener('scroll', (e) => {
   let closeIconEl = document.getElementById('closeIcon');
 
   hamburgerIconEl.addEventListener("click",()=>{
-    hamburgerNavEl.style.width = "50vw";
+      hamburgerNavEl.style.display = "block";
+      hamburgerNavEl.style.width = "50vw";
+      closeIconEl.style.display = "block";
+    })
+    
+    closeIconEl.addEventListener("click",()=>{
+    hamburgerNavEl.style.display = "none";
+    hamburgerNavEl.style.width = "0";
+    closeIconEl.style.display = "none";
   })

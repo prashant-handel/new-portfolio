@@ -248,7 +248,7 @@ a {
   display: flex;
   font-size: 500%;
   justify-content: center;
-  margin: 1em 0em 3rem 0em;
+  margin: 2em 0em 3rem 0em;
 }
 
 .projectsContainer,
@@ -488,45 +488,54 @@ footer {
   .navLink{
     color: white;
     display: flex;
+    font-size: larger;
+  }
+  .navLink:hover{
+    color: black;
+    transition: 0.5s;
   }
   .hamburgerNav{
-    display: block;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
     width: 0;
-    background-color: #7006e6;
+    background-color: #6f06e6f3;
     z-index: 2;
   }
   .hamburgerList{
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    padding: 0px 5px;
     list-style: none;
   }
   .hamburger {
     display: block;
+    position: absolute;
     width: 20px;
   }
   .hamburgerIcon{
     position: relative;
-    display: flex;
-    top: -25px;
+    display: block;
+    top: -55px;
     left: 10px;
     fill: #7006e6;
     cursor: pointer;
+    z-index: 2;
   }
   .closeIcon{
     position: relative;
-    display: flex;
-    top: -25px;
+    top: 5px;
     left: 10px;
-    fill: #7006e6;
+    fill: white;
     cursor: pointer;
     display: none;
+    z-index: 3;
+    width: 20px;
   }
   .navLogo {
     width: 100vw;
@@ -536,7 +545,7 @@ footer {
   .prashantlogo {
     margin: 2%;
     display: block;
-    width: 70vw;
+    width: 150px;
     height: 7vh;
     padding-top: 2vh;
   }
@@ -606,7 +615,7 @@ footer {
   }
 
   .contactMe button svg {
-    width: 2vw;
+    width: 30px;
     margin: -7px 5px;
     margin-right: 1px;
   }
@@ -627,9 +636,9 @@ footer {
     display: none;
   }
   .downloadResume {
-    margin: auto;
+    margin-top: 50px;
     width: auto;
-    font-size: large;
+    font-size: small;
   }
   div a svg {
     margin: auto;
@@ -713,10 +722,13 @@ footer {
   .picture2{
     width: 120px;
   }
-  }
+}
 
 @media (min-width: 400px) and (max-width: 900px) {
   .prashantlogo {
-    height: 15vh;
+    width: 200px;
   }
+  .picture2{
+    width: 200px;
   }
+}
