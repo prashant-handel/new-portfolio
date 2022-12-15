@@ -1,202 +1,722 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Times New Roman', Times, serif;
-    scroll-behavior: smooth;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", Times, serif;
+  scroll-behavior: smooth;
 }
 
-body{
+body {
   overflow-x: hidden;
 }
 
-.prashantlogo{
+.upScroll{
+  display: none;
+}
+
+.prashantlogo,
+.footerLogo {
   width: 25vw;
   height: 8vh;
   padding-top: 2vh;
 }
 
-.navMenu{
+.navMenu {
   width: 65vw;
 }
 
-.navList{
-    display: flex;
-    flex-direction: row;
-    width: 70vw;
-    justify-content: center;
+.navList {
+  display: flex;
+  flex-direction: row;
+  width: 70vw;
+  justify-content: center;
 }
 
-.navLink{
-    text-decoration: none;
-    color: black;
+.navLink {
+  text-decoration: none;
+  color: black;
 }
 
-nav li{
+nav li,
+.footerList li {
   list-style: none;
   padding-left: 3vw;
   font-size: 1.5rem;
   font-weight: 600;
 }
 
-.navLink:hover{
-    color: blueviolet;
-    border-bottom: 2px solid #7006E6;
+.footerList li {
+  font-size: medium;
+}
+
+.navLink:hover {
+  color: blueviolet;
+  border-bottom: 2px solid #7006e6;
+  cursor: pointer;
 }
 
 nav {
-    background-color: white;
-    width: 100%;
-    align-items: center;
-    height: 10vh;
-    display: flex;
-    padding: 1vh 1vw;
-    overflow: hidden;
-  }
-
-  .introduction{
-    /* background: #000; */
-    display: flex;
-    width: 100%;
-    margin-left: 5vw;
-  }
-
-.firstCol{
-    width: 10vw;
-    height: 50vh;
-    /* border: 2px solid red; */
-    display: flex;
-    flex-direction: column;
-    gap: 5vh;
-    justify-content: center;
-    align-items: center;
-    height: 66vh;
-    padding: 2vh 1vw;
+  background-color: white;
+  width: 100%;
+  align-items: center;
+  height: 10vh;
+  display: flex;
+  padding: 1vh 1vw;
+  overflow: hidden;
+  position: fixed;
+  z-index: 1;
 }
 
-.secondCol{
-    width: 30vw; 
-    height: 60vh;
-    /* border: 2px solid blue; */
-    padding: 10vh 1vw;
-    padding-bottom: 0;
+.introduction {
+  display: flex;
+  width: 100%;
+  margin-left: 5vw;
+  padding-top: 10vh;
+}
 
-  }
-  
-  .thirdCol{
-    width: 50vw;
-    height: 70vh;
-    /* border: 2px solid yellowgreen; */
-  }
+.firstCol {
+  width: 10vw;
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  justify-content: center;
+  align-items: center;
+  height: 66vh;
+  padding: 2vh 1vw;
+}
 
-  .linkedInImg{
-    width: 50px;
-    height: 50px;
-  }
+.secondCol {
+  width: 30vw;
+  /* height: 80vh; */
+  /* border: 2px solid blue; */
+  padding: 10vh 1vw;
+  padding-bottom: 0;
+  display: block;
+}
 
-  .githubImg{
-    width: 50px;
-    height: 50px;
-  }
+.thirdCol {
+  width: 50vw;
+  height: 70vh;
+  display: flex;
+}
 
-  .vercelImg{
-    width: 50px;
-    height: 50px;
-    fill: #7006E6;
-  }
+.linkedInImg {
+  width: 50px;
+  height: 50px;
+}
 
-  div a svg{
-    width: 50px;
-    height: 50px;
-  }
+.githubImg {
+  width: 50px;
+  height: 50px;
+}
 
-  .welcomeText{
-    font-size: 3rem;
-    font-weight: 700;
-    margin-top: 20vh;
-  }
+.vercelImg {
+  width: 50px;
+  height: 50px;
+  fill: #7006e6;
+}
 
-  .tagLine{
+.hashnodeImg {
+  width: 50px;
+  height: 50px;
+  fill: #7006e6;
+}
+
+div a svg {
+  width: 35px;
+  height: 35px;
+}
+
+.welcomeText {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: 20vh;
+}
+
+.tagLine {
+  font-size: 2rem;
+}
+
+.aboutIntro {
+  font-size: x-large;
+  text-align: justify;
+}
+
+.secondCol div {
+  margin-top: 5vh;
+  display: block;
+}
+
+.contactMe button {
+  cursor: pointer;
+  background-color: #7006e6;
+  color: white;
+  padding: 1vh 1vw;
+  border-radius: 10px;
+  font-size: x-large;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.contactMe button:hover {
+  background-color: #6521bd;
+}
+
+.contactMe button svg {
+  width: 2vw;
+  margin: -7px 5px;
+  margin-right: 1px;
+}
+
+#mouseIcon {
+  width: 2vw;
+  fill: #7006e6;
+  margin: -7px 15px;
+  margin-left: 0;
+}
+
+.scrollDown button {
+  color: #7006e6;
+  font-size: larger;
+  margin: 5vh 18vw;
+  border: none;
+  font-weight: 600;
+  background-color: white;
+}
+
+#downArrow {
+  width: 1vw;
+  fill: #7006e6;
+  margin: 0px 15px;
+}
+
+.scrollDown button:hover {
+  cursor: pointer;
+  transform: translate(0, 0.5vh);
+  transition-duration: 0.3s;
+}
+
+.picture1 {
+  height: 40vh;
+  width: 15vw;
+  display: flex;
+  border: 2px solid #7006e6;
+  border-radius: 10px;
+}
+
+.aboutSection {
+  display: flex;
+  justify-content: center;
+}
+
+.aboutText {
+  font-size: x-large;
+  width: 40vw;
+  margin-left: 10vw;
+  margin-top: 8vh;
+  line-height: 8vh;
+  text-align: justify;
+}
+
+.downloadResume {
+  margin: 7vh 10vw 0;
+  padding: 1%;
+  background-color: #7006e6;
+  border-radius: 10px;
+  color: white;
+  font-size: x-large;
+  display: flex;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.downloadResume:hover {
+  cursor: pointer;
+  background-color: #6521bd;
+}
+
+.downloadIcon {
+  margin-left: 1rem;
+}
+
+.aboutMeHead,
+.projectsHeading,
+.blogsHeading,
+.contactHeading {
+  display: flex;
+  font-size: 500%;
+  justify-content: center;
+  margin: 1em 0em 3rem 0em;
+}
+
+.projectsContainer,
+.blogsContainer {
+  width: 95%;
+  padding: 0vh 2vw;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.projectBlock,
+.blogBlock {
+  display: block;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+  width: 200px;
+  height: 300px;
+  padding: 1rem 1rem;
+  text-align: center;
+  color: #7006e6;
+  font-size: xx-large;
+  line-height: 1.5em;
+  margin-top: 20px;
+}
+
+.projectBlock:hover,
+.blogBlock:hover {
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
+  background-color: #9632cf21;
+}
+
+.projectsContainer a,
+.blogsContainer a {
+  text-decoration: none;
+}
+
+footer {
+  margin-top: 10vh;
+  background-color: #7006e6;
+  padding: 2vh 2vw;
+}
+
+.blockContent {
+  font-size: large;
+  color: black;
+  line-height: 2rem;
+  text-align: left;
+}
+
+.footerNavLogo {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+.footerLogo {
+  font-size: xx-large;
+}
+
+.footerTag {
+  font-size: large;
+  font-weight: 400;
+}
+
+.footerMain {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.footerLink {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-size: x-large;
+}
+
+.footerIcons {
+  display: flex;
+  flex-direction: row;
+  width: 20vw;
+  justify-content: space-evenly;
+}
+
+.footerList {
+  display: flex;
+  flex-direction: row;
+  width: 40vw;
+  justify-content: center;
+}
+
+.eMail svg {
+  width: 4vw;
+  fill: #7006e6;
+  margin-right: 1vw;
+}
+
+.eMail,
+.location {
+  font-size: xx-large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+}
+
+.location {
+  margin-top: 10vh;
+}
+
+.eMailContent,
+.locationContent {
+  display: flex;
+  justify-content: center;
+  font-size: x-large;
+  margin-top: 2vh;
+}
+
+.container {
+  position: relative;
+}
+
+.upScroll {
+  position: fixed;
+  bottom: 10em;
+  right: 100px;
+  cursor: pointer;
+  width: 1vw;
+  fill: #7006e6;
+  border-radius: 10px;
+}
+
+.allRightReserved a {
+  color: white;
+  font-size: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+.location i {
+  width: 4vw;
+  color: #7006e6;
+}
+
+.location {
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+.locationContent {
+  font-size: x-large;
+  margin-top: 5vh;
+}
+
+.contactCol1 {
+  display: flex;
+  flex-direction: column;
+  width: 45vw;
+}
+
+.contactCol2 {
+  display: flex;
+  flex-direction: column;
+  width: 45vw;
+}
+
+.contactBlock {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+.input {
+  width: 30vw;
+  margin: 0.5rem;
+  padding: 1%;
+  font-size: x-large;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+.sendMessage {
+  width: fit-content;
+  font-size: large;
+  cursor: pointer;
+  background-color: #7006e6;
+  color: white;
+  margin: 5px;
+  padding: 0.8em;
+  border-radius: 10px;
+}
+
+.sendMessage:hover {
+  background-color: #53298ae3;
+}
+
+.inputMessage {
+  margin: 0.5rem;
+  padding: 1%;
+  font-size: x-large;
+  border-radius: 10px;
+  border: 2px solid black;
+  width: 30vw;
+}
+
+.picture2{
+  border: 2px solid #7006e6;
+  border-radius: 30px;
+  width: min-content;
+  height: min-content;
+}
+.thirdCol{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+
+.thirdCol img{
+  scale: 150%;
+}
+.hamburger {
+  display: none;
+}
+.hamburgerNav{
+  display: none;
+}
+
+
+
+
+@media (max-width: 900px) {
+  .navMenu {
+    display: none;
+  }
+  .navLink{
+    color: white;
+    display: flex;
+  }
+  .hamburgerNav{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 0;
+    background-color: #7006e6;
+    z-index: 2;
+  }
+  .hamburgerList{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+  .hamburger {
+    display: block;
+    width: 20px;
+  }
+  .hamburgerIcon{
+    position: relative;
+    display: flex;
+    top: -25px;
+    left: 10px;
+    fill: #7006e6;
+    cursor: pointer;
+  }
+  .closeIcon{
+    position: relative;
+    display: flex;
+    top: -25px;
+    left: 10px;
+    fill: #7006e6;
+    cursor: pointer;
+    display: none;
+  }
+  .navLogo {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+  .prashantlogo {
+    margin: 2%;
+    display: block;
+    width: 70vw;
+    height: 7vh;
+    padding-top: 2vh;
+  }
+  .introduction {
+    display: inline-block;
+    padding-top: 1vh;
+    width: 95vw;
+  }
+  .firstCol {
+    display: flex;
+    flex-direction: row;
+    min-height: auto;
+    gap: 5vw;
+    width: auto;
+    height: auto;
+  }
+  .secondCol {
+    width: auto;
+    padding-top: 1vh;
+    min-height: min-content;
+    display: inline;
+  }
+  .thirdCol {
+    display: none;
+  }
+  .welcomeText {
     font-size: 2rem;
   }
-
-  .aboutIntro{
-    font-size: x-large;
+  .tagLine {
+    font-size: 1.5rem;
+    width: 95vw;
   }
-
-  .thirdCol svg{
-    width: 40vw;
+  .aboutIntro {
+    font-size: medium;
+    width: 85vw;
   }
-
-  .secondCol div{
-    margin-top: 5vh;
+  .scrollDown {
+    display: none;
   }
-
-  .contactMe button{
+  .aboutMeHead {
+    font-size: 200%;
+    margin: 4rem 0 2rem;
+  }
+  .projectsHeading,
+  .blogsHeading,
+  .contactHeading {
+    font-size: 200%;
+    margin: 5rem 0 2rem 0;
+  }
+  .contactHeading {
+    font-size: 200%;
+    margin: 5rem 0 0 0;
+  }
+  .contactMe button {
     cursor: pointer;
-    background-color: #7006E6;
+    background-color: #7006e6;
     color: white;
     padding: 1vh 1vw;
     border-radius: 10px;
     font-size: x-large;
     text-align: center;
     margin-top: 1rem;
+    scale: 80%;
+  }
+  .contactMe button:hover {
+    background-color: #6521bd;
   }
 
-  .contactMe button svg{
+  .contactMe button svg {
     width: 2vw;
     margin: -7px 5px;
     margin-right: 1px;
   }
-
-  #mouseIcon{
-    width: 2vw;
-    fill: #7006E6;
-    margin: -7px 15px;
-    margin-left: 0;
+  nav {
+    position: static;
   }
-  
-  .scrollDown button{
-    color: #7006E6;
-    font-size: larger;
-    margin: 7vh 18vw;
-    border: none;
-    font-weight: 600;
-    background-color: white;
+  .secondCol div {
+    margin-top: 8px;
   }
-
-  #downArrow{
-    width: 1vw;
-    fill: #7006E6;
-    margin: 0px 15px;
+  .aboutText {
+    font-size: medium;
+    width: auto;
+    margin: 3vw;
+    line-height: normal;
+    text-align: justify;
   }
-
-  .scrollDown button:hover{
-    cursor: pointer;
+  .scrollDown {
+    display: none;
   }
-
-  .pic{
-    width: 20vw;
+  .downloadResume {
+    margin: auto;
+    width: auto;
+    font-size: large;
+  }
+  div a svg {
+    margin: auto;
+    width: 24px;
+    height: auto;
+    font-size: large;
+  }
+  .aboutSection {
     display: flex;
+    align-items: center;
+    width: 95vw;
+    margin: 0 20px;
   }
-
-  .aboutMe{
+  .blockContent {
+    font-size: medium;
+    line-height: normal;
+    position: static;
+    margin-top: 2vh;
+  }
+  .projectBlock,
+  .blogBlock {
+    font-size: large;
+    line-height: 1.5em;
+    display: block;
+    width: 200px;
+    height: 150px;
+    border-top: 1px solid rgba(0, 0, 0, 0.237);
+  }
+  .projectsContainer,
+  .blogsContainer {
     display: flex;
-    font-size: 500%;
+    gap: 1vh;
     justify-content: center;
-    margin: 1em 0;
+  }
+  .contactCol1, .contactCol2 {
+    display: block;
+    width: auto;
+    scale: 75%;
+  }
+  .contactBlock {
+    display: block;
+    height: 75%;
+  }
+  .input {
+    width: auto;
+    display: block;
+  }
+  .inputMessage {
+    width: auto;
+    display: block;
+  }
+  .eMail svg {
+    width: 10vw;
+    margin: 10px;
+  }
+  .fa-solid {
+    margin: 10px;
+  }
+  .footerNav {
+    display: none;
+  }
+  .footerIcons {
+    display: none;
+  }
+  .footerLogo {
+    font-size: large;
+    width: auto;
+    height: auto;
+  }
+  .footerTag {
+    font-size: small;
+    font-weight: 300;
+  }
+  .allRightReserved {
+    margin-top: auto;
+    font-size: x-small;
+  }
+  .upScroll {
+    width: 0;
+  }
+  .picture2{
+    width: 120px;
+  }
   }
 
-  .aboutSection{
-    display: flex;
-    justify-content: center;
+@media (min-width: 400px) and (max-width: 900px) {
+  .prashantlogo {
+    height: 15vh;
   }
-
-  .aboutText{
-    font-size: x-large;
-    width: 40vw;
-    margin-left: 10vw;
-  }
-
-  .skills{
-    font-size: xx-large;
   }
