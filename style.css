@@ -196,8 +196,8 @@ div a svg {
 }
 
 .picture1 {
-  height: 40vh;
-  width: 15vw;
+  height: 50vh;
+  width: 18vw;
   display: flex;
   border: 2px solid #7006e6;
   border-radius: 10px;
@@ -468,16 +468,12 @@ footer {
   align-self: center;
 }
 
-.thirdCol img{
-  scale: 150%;
-}
 .hamburger {
   display: none;
 }
 .hamburgerNav{
   display: none;
 }
-
 
 
 
